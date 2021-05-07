@@ -8,3 +8,5 @@
 - https://github.com/prometheus-community/json_exporter
 - https://github.com/ClickHouse/clickhouse_exporter
 - https://github.com/prometheus-community/postgres_exporter
+
+# Add all this as ansible scripts
