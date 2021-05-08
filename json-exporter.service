@@ -1,0 +1,12 @@
+[Unit]
+Description=JSON Exporter
+After=network.target
+ 
+[Service]
+User=prometheus
+Group=prometheus
+Type=simple
+ExecStart=/etc/prometheus/json-exporter/json_exporter --config.file /etc/prometheus/json-exporter/config.yml
+ 
+[Install]
+WantedBy=multi-user.target

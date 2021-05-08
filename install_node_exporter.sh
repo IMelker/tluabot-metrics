@@ -17,11 +17,11 @@ chown -R prometheus:prometheus /etc/prometheus/node-exporter/
 cp ./node-exporter.service /etc/systemd/system/node-exporter.service
 
 # add 
-echo "scrape_configs:
-  - job_name: 'prometheus'
-    scrape_interval: 5s
+echo "
+- job_name: node
+    scrape_interval: 15s
     static_configs:
-      - targets: ['localhost:9090', 'localhost:9100']" >> PROMETHEUS_YML
+      - targets: ['localhost:9100']" >> PROMETHEUS_YML
 
 systemctl daemon-reload
 systemctl enable node-exporter.service
